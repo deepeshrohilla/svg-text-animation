@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    min-height: 100vh;
+}
+
+#thanos {
+    width: 800px;
+    height: 300px;
+}
+
+#thanos text {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: #fff;
+    stroke-dasharray: 850;
+    stroke-dashoffset: 0;
+    cursor: pointer;
+    font-family: arial;
+}
+
+#thanos text:hover {
+    animation: thanos 5s linear forwards;
+}
+
+@keyframes thanos {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 850;
+    }
+    80% {
+        stroke-dashoffset: 1700;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 1700;
+        fill: #fff;
+    }
+}
